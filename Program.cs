@@ -1,6 +1,6 @@
 ﻿
 //Функция выводит сообщение message и ожидает ввода числа с проверкой, что ввели число.
-int read_int_from_console(string message)
+int ReadIntFromConsole(string message)
 {
     int console_int = 0;
 
@@ -54,10 +54,18 @@ string[] FillArray(int n)
 
     for (int i = 0; i < n; i++)
     {
-        Console.Write($"\nВведите строку для {i}-го элемента массива: ");
+        Console.Write($"Введите строку для {i}-го элемента массива: ");
         string? readString = Console.ReadLine();
         //Если приняли null то запишем пустую строку
         resultArray[i] = readString==null?"":readString;
     }
     return resultArray;
 }
+
+Console.WriteLine("Программа выводит из введенного массива все элементы длинна строки которых <= 3");
+
+string[] readArray = new string[ ReadIntFromConsole("Введите кол-во элементов массива") ];
+
+readArray = FillArray( readArray.Length );
+
+Console.WriteLine(string.Join(",", GetResulElements(readArray)));
