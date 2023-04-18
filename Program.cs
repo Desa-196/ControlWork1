@@ -20,3 +20,12 @@ int read_int_from_console(string message)
     return console_int;
 
 }
+int CountResultElements(string[] stringArray)
+{
+    int countElements = 0;
+    foreach(string element in stringArray)
+    {
+        if(element.Length <= 3) countElements++;
+    }
+    return countElements;
+}
