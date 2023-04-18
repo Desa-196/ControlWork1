@@ -36,6 +36,17 @@
 [“Russia”, “Denmark”, “Kazan”] → []
 
 ## Решение:
+Пишем функцию <span style="color:blue">ReadIntFromConsole()</span> для запроса ввода числа кол-ва элементов массива с проверкой правильности ввода
+
+Пишем функцию <span style="color:blue">FillArray()</span> которая в цикле запрашивает ввод строк и заполненяет ими массив
+
+Пишем функцию <span style="color:blue">CountResultElements()</span> которая посчитает в веденном массиве кол-во элементов строка которых <=3
+
+Пишем функцию <span style="color:blue">GetResulElements</span> которая вернёт массив с элементами которые <=3
+
+
+
+
 Блок схемы основных функций:
 
 1. Блок схема функции CountResultElements
