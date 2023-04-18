@@ -30,6 +30,7 @@ int CountResultElements(string[] stringArray)
     }
     return countElements;
 }
+
 //Функция возвращает массив из элементов длинна строки которых <= 3
 string[] GetResulElements(string[] stringArray)
 {
@@ -47,6 +48,16 @@ string[] GetResulElements(string[] stringArray)
 
     return resultArray;
 }
+
+
+/*Вариант решения с помощью LINQ
+
+string[] GetResulElements(string[] stringArray)
+{
+    return stringArray.Where(o => o.Length <= 3).ToArray();
+}
+*/
+
 //Функция запрашивает ввод n строк для заполнения массива
 string[] FillArray(int n)
 {
