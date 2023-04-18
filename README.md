@@ -34,3 +34,17 @@
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 
 [“Russia”, “Denmark”, “Kazan”] → []
+
+## Решение:
+Блок схемы основных функций:
+
+1. Блок схема функции CountResultElements
+
+
+ ![Блок схема функции CountResultElements](BlockShemaCountResultElements.png)
+
+
+2. Блок схема функции GetResulElements
+
+
+ ![Блок схема функции GetResulElements](BlockShemaGetResulElements.png)
