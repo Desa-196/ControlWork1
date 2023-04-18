@@ -6,9 +6,9 @@ int read_int_from_console(string message)
 
     Console.Write($"{message}: ");
 
-    while(true)
+    while (true)
     {
-        if( int.TryParse(Console.ReadLine(), out console_int ) )
+        if (int.TryParse(Console.ReadLine(), out console_int))
         {
             break;
         }
@@ -20,12 +20,30 @@ int read_int_from_console(string message)
     return console_int;
 
 }
+//Функция возвращает кол-во элементов в массиве длинна строки которых <= 3
 int CountResultElements(string[] stringArray)
 {
     int countElements = 0;
-    foreach(string element in stringArray)
+    foreach (string element in stringArray)
     {
-        if(element.Length <= 3) countElements++;
+        if (element.Length <= 3) countElements++;
     }
     return countElements;
+}
+//Функция возвращает массив из элементов длинна строки которых <= 3
+string[] GetResulElements(string[] stringArray)
+{
+    string[] resultArray = new string[CountResultElements(stringArray)];
+
+    int i = 0;
+    foreach (string element in stringArray)
+    {
+        if (element.Length <= 3)
+        {
+            resultArray[i] = element;
+            i++;
+        }
+    }
+
+    return resultArray;
 }
