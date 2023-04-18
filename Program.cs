@@ -47,3 +47,17 @@ string[] GetResulElements(string[] stringArray)
 
     return resultArray;
 }
+//Функция запрашивает ввод n строк для заполнения массива
+string[] FillArray(int n)
+{
+    string[] resultArray = new string[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        Console.Write($"\nВведите строку для {i}-го элемента массива: ");
+        string? readString = Console.ReadLine();
+        //Если приняли null то запишем пустую строку
+        resultArray[i] = readString==null?"":readString;
+    }
+    return resultArray;
+}
